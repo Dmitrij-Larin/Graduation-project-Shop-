@@ -102,7 +102,7 @@ DATABASES = {
         'HOST': HOST,
         'PORT': '',
         'OPTIONS': {
-            'driver': DRIVER
+            'driver': DRIVER,
         }
     }
 }
