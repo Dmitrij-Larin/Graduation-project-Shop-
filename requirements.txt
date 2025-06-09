@@ -1,0 +1,6 @@
+mssql-django
+python-dotenv
+Pillow
+Django
+redis
+flake8
