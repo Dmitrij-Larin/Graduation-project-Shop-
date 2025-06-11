@@ -5,22 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My shop{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-
-    <header class="bg-dark text-white text-center p-4">
-        <h1>Интернет-магазин Инструментов</h1>
-    </header>
-
-    <main class="container col-12">
+    <div id="header">
+        <a href="/" class="logo">Инструменты</a>
+    </div>
+    <div id="subheader">
+        <div class="cart">
+            Ваша корзина пуста.
+        </div>
+    </div>
+    <div id="content">
         {% block content %}
         {% endblock %}
-    </main>
-
-    <footer class="bg-dark text-white text-center p-3">
-        <p>&copy; 2025 Интернет-магазин инструментов. Все права защищены.</p>
-    </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
