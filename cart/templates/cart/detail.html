@@ -1,4 +1,4 @@
-{% extend "shop/base.html" %}
+{% extends "shop/base.html" %}
 {% load static %}
 
 {% block title %}
@@ -31,8 +31,8 @@ Your shopping cart
                 <td>{{ product.name }}</td>
                 <td>{{ item.quantity }}</td>
                 <td>
-                    <form action="{% url 'cart_remove' product.id %}" method="post">
-                        <input type="submit" value="Remove">
+                    <form action="{% url 'cart:cart_remove' product.id %}" method="post">
+                        <input type="submit" value="Удалить">
                         {% csrf_token %}
                     </form>
                 </td>
