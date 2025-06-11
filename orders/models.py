@@ -25,7 +25,7 @@ class Order(models.Model):
         return sum(item.get_cost() for item in self.items.all())
 
 
-class OrderItems(models.Model):
+class OrderItem(models.Model):
     order = models.ForeignKey(
         Order,
         related_name='items',
