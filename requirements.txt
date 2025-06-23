@@ -4,3 +4,4 @@ Pillow
 Django
 redis
 flake8
+celery
