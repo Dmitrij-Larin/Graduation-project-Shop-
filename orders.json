@@ -1,0 +1,242 @@
+[
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-18T15:38:58.743Z",
+      "updated": "2025-06-18T15:38:58.743Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user3@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-18T16:00:18.677Z",
+      "updated": "2025-06-18T16:00:18.677Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-18T16:35:37.236Z",
+      "updated": "2025-06-18T16:35:37.236Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T21:06:12.923Z",
+      "updated": "2025-06-23T21:06:12.923Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 5,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:00:33.056Z",
+      "updated": "2025-06-23T22:00:33.056Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 6,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user5@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:03:25.007Z",
+      "updated": "2025-06-23T22:03:25.008Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 7,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:07:16.645Z",
+      "updated": "2025-06-23T22:07:16.645Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 8,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:12:40.870Z",
+      "updated": "2025-06-23T22:12:40.870Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 9,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user5@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:15:19.641Z",
+      "updated": "2025-06-23T22:15:19.641Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 10,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:16:48.995Z",
+      "updated": "2025-06-23T22:16:48.995Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 11,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-23T22:17:20.848Z",
+      "updated": "2025-06-23T22:17:20.848Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 12,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-25T13:35:51.328Z",
+      "updated": "2025-06-25T13:35:51.328Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 13,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user1@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-25T13:54:16.834Z",
+      "updated": "2025-06-25T13:54:16.834Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 14,
+    "fields": {
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-25T16:21:24.127Z",
+      "updated": "2025-06-25T16:21:24.127Z",
+      "paid": false
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 12,
+    "fields": {
+      "order": 12,
+      "product": 10,
+      "price": "7123.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 13,
+    "fields": {
+      "order": 13,
+      "product": 11,
+      "price": "6212.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 14,
+    "fields": {
+      "order": 14,
+      "product": 11,
+      "price": "6212.00",
+      "quantity": 1
+    }
+  }
+]
