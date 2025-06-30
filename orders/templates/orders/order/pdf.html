@@ -1,0 +1,43 @@
+<html>
+<body>
+  <h1>Инструменты</h1>
+  <p>
+    Счёт-фактура №{{ order.id }}<br>
+    <span class="secondary">
+      {{ order.created|date: d M Y }}
+    </span>
+  </p>
+  <h3>Счёт для:</h3>
+  <p>
+    {{ order.first_name }} {{ order.last_name }}<br>
+    {{ order.email }}<br>
+    {{ order.address }}<br>
+    {{ order.postal_code }}, {{ order.city }}
+  </p>
+  <h3>Купленные товары</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Товар</th>
+        <th>Цена</th>
+        <th>Количество</th>
+        <th>Общая стоимость</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in order.items.all %}
+      <tr class="row{% cycle '1' '2' %}">
+        <td>{{ item.product.name }}</td>
+        <td class="num">{{ item.price }} руб.</td>
+        <td class="num">{{ item.quantity }}</td>
+        <td class="num">{{ item.get_cost }} руб.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <span class="{% if order.paid %}paid{% else %}pending{% endif %}">
+    {% if order.paid %}Оплачен{% else %}Ожидает оплаты{% endif %}
+  </span>
+</body>
+</html>
