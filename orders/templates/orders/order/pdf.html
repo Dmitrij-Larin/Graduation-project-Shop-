@@ -1,10 +1,16 @@
-<html>
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Счёт-фактура</title>
+</head>
 <body>
   <h1>Инструменты</h1>
   <p>
     Счёт-фактура №{{ order.id }}<br>
     <span class="secondary">
-      {{ order.created|date: d M Y }}
+      {{ order.created|date:"M d, Y" }}
     </span>
   </p>
   <h3>Счёт для:</h3>
