@@ -1,12 +1,13 @@
-import os
 import weasyprint
 from django.conf import settings
-from django.contrib.staticfiles import finders
+
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.contrib.admin.views.decorators import staff_member_required
+
+from pathlib import Path
 
 from cart.cart import Cart
 from orders.forms import OrderCreateForm
@@ -59,21 +60,37 @@ def order_create(request):
 @staff_member_required
 def admin_order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    return render(request, 'admin/orders/order/detail.html', {'order': order})
+    return render(
+        request, 'admin/orders/order/detail.html', {'order': order}
+    )
 
 
 @staff_member_required
 def admin_order_pdf(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    html = render_to_string('orders/order/pdf.html', {'order': order})
+    html = render_to_string(
+        'orders/order/pdf.html', {'order': order}
+    )
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = (f'filename=order_{order.id}.pdf')
+    response['Content-Disposition'] = (
+        f'filename=order_{order.id}.pdf'
+    )
     weasyprint.HTML(string=html).write_pdf(
         response,
         stylesheets=[
             weasyprint.CSS(
-                os.path.join(settings.STATIC_ROOT, 'css/pdf.css')
+                Path(settings.STATIC_ROOT) / 'css/pdf.css'
             )
         ]
     )
     return response
+
+
+def order_details(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    order_user = order.user
+    context = {
+        'order': order,
+        'order_user': order_user
+    }
+    return render(request, 'order_details.html', context)
