@@ -37,7 +37,7 @@ def stripe_webhook(request):
             # сохранить id платежа Stripe
             order.stripe_id = session.payment_intent
             order.save()
-            # запустить асинхронное задание
-            payment_completed.delay(order.id)
+            # # запустить асинхронное задание
+            # payment_completed.delay(order.id)
 
     return HttpResponse(status=200)
