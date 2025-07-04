@@ -1,0 +1,35 @@
+{% extends "shop/base.html" %}
+
+{% block title %}
+Детали заказа №{{ order.id }}
+{% endblock %}
+
+{% block content %}
+    <h1>Детали заказа №{{ order.id }}</h1>
+
+    <p><strong>Пользователь:</strong> {{ order_user.email }}</p>
+    <p><strong>Имя:</strong> {{ order.first_name }}</p>
+    <p><strong>Фамилия:</strong> {{ order.last_name }}</p>
+    <p><strong>Электронная почта:</strong> {{ order.email }}</p>
+    <p><strong>Адрес:</strong> {{ order.address }}</p>
+    <p><strong>Город:</strong> {{ order.city }}</p>
+    <p><strong>Почтовый индекс:</strong> {{ order.postal_code }}</p>
+
+    <h2>Товары в заказе:</h2>
+    <ul>
+        {% for item in order.items.all %}
+            <li>
+                {{ item.product.name }} - {{ item.quantity }} шт. по цене {{ item.price }} руб.
+                Общая стоимость: {{ item.get_cost }} руб.
+            </li>
+        {% empty %}
+            <li>Нет товаров в этом заказе.</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Итоговая стоимость: {{ order.get_total_cost }} руб.</h3>
+    <p><strong>Дата создания:</strong> {{ order.created }}</p>
+    <p><strong>Статус:</strong> {% if order.paid %} Оплачен {% else %} Не оплачен {% endif %}</p>
+
+    <a href="{% url 'user_orders' order.user.id %}">Вернуться к заказам</a>
+{% endblock %}
