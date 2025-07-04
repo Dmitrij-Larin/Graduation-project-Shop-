@@ -55,7 +55,9 @@ class UserLoginForm(StyleFromMixin, AuthenticationForm):
     """
     Форма логина пользователя
     """
-    pass
+    class Meta:
+        model = AuthenticationForm
+        fields = ('email', 'password')
 
 
 class UserUpdateForm(StyleFromMixin, forms.ModelForm):

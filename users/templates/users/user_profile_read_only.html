@@ -22,7 +22,7 @@
                 <button class="btn btn-outline-danger float-right">
                     <a class="btn btn-link" href="{% url 'users:user_generate_new_password' %}">Генерация пароля</a>
                 </button>
-                <a href="{% url 'users:user_order_history' %}">История заказов</a>
+                <a href="{% url 'users:user_orders' user.id %}">Детали заказов</a>
             </div>
         </div>
     </div>

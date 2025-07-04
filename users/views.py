@@ -1,7 +1,7 @@
 import random
 import string
 
-from django.shortcuts import reverse, redirect, render
+from django.shortcuts import reverse, redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView
 from django.views.generic import CreateView, UpdateView, DetailView
@@ -133,7 +133,11 @@ def user_generate_new_password_view(request):
     return redirect(reverse('dogs:index'))
 
 
-@login_required
-def user_order_history(request):
-    orders = request.user.orders.all()
-    return render(request, 'users/user_order_history.html', {'orders': orders})
+def user_orders(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+    orders = user.orders.all()
+    context = {
+        'user': user,
+        'orders': orders,
+    }
+    return render(request, 'users/user_orders.html', context)
