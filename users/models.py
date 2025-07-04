@@ -1,6 +1,8 @@
+from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
+
+from orders.models import Order
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -14,47 +16,40 @@ class UserRoles(models.TextChoices):
     USER = 'user', _('user')
 
 
+class UserManager(BaseUserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        if not email:
+            raise ValueError('Email обязателен')
+        user = self.model(email=self.normalize_email(email), **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_superuser(self, email, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Суперпользователь должен быть членом персонала.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Суперпользователь должен быть суперпользователем.')
+
+        return self.create_user(email, password, **extra_fields)
+
+
 class User(AbstractUser):
-    """
-    Модель пользователя
-    """
-
-    groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='custom_user_set',  # Задайте уникальное имя
-        blank=True,
-        help_text='Группы, к которым принадлежит пользователь.',
-        related_query_name='custom_user'
-    )
-
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='custom_user_set',  # Задайте уникальное имя
-        blank=True,
-        help_text='Разрешения, предоставленные пользователю.',
-        related_query_name='custom_user'
-    )
-
-    username = None
     email = models.EmailField(unique=True, verbose_name='Эл. почта')
-    role = models.CharField(max_length=9, choices=UserRoles.choices, default=UserRoles.USER)
     first_name = models.CharField(max_length=150, verbose_name='Имя', default='Anonymous')
     last_name = models.CharField(max_length=150, verbose_name='Фамилия', default='Anonymous')
     avatar = models.ImageField(upload_to='users/', verbose_name='Аватар', **NULLABLE)
+    role = models.CharField(max_length=9, choices=UserRoles.choices, default=UserRoles.USER)
 
+    # Связь с заказами
+    orders = models.ManyToManyField(Order, related_name='users', blank=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    def __str__(self):
-        """
-        Представление модели в строковом виде
-        """
-        return f'{self.email}'
+    objects = UserManager()  # Указываем свой менеджер
 
-    class Meta:
-        """
-        Настройка параметров для модели User
-        """
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
-        ordering = ['id']
+    def __str__(self):
+        return self.email

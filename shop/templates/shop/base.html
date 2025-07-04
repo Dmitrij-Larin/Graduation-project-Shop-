@@ -15,6 +15,18 @@
 <body>
     <div id="header">
         <a href="/" class="logo">Инструменты</a>
+        <div class="auth-links" style="float: right;">
+        {% if user.is_authenticated %}
+            <a href="{% url 'users:user_profile' %}">Профиль ({{ user.email }})</a>
+            <form action="{% url 'users:user_logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Выйти</button>
+            </form>
+        {% else %}
+            <a href="{% url 'users:user_login' %}">Вход</a>
+            <a href="{% url 'users:user_register' %}">Регистрация</a>
+        {% endif %}
+    </div>
     </div>
     <div id="subheader">
         <div class="cart">
@@ -35,6 +47,14 @@
         {% block content %}
         {% endblock %}
     </div>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; margin-top: 10px">
+    <p>&copy; 2025 Ваш сайт. Все права защищены.</p>
+    <ul>
+        <li><a href="#">Политика конфиденциальности</a></li>
+        <li><a href="#">Условия использования</a></li>
+        <li><a href="#">Контакты</a></li>
+    </ul>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>

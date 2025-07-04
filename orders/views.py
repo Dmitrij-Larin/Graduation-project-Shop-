@@ -16,10 +16,19 @@ from orders.tasks import order_created
 
 def order_create(request):
     cart = Cart(request)
+    # Проверка на аутентификацию пользователя
+    if not request.user.is_authenticated:
+        return redirect('user_login')
+
     if request.method == 'POST':
         form = OrderCreateForm(request.POST)
+
         if form.is_valid():
-            order = form.save()
+            # Создание заказа и связывание с пользователем
+            order = form.save(commit=False)
+            order.user = request.user  # Связываем заказ с пользователем
+            order.save()
+
             for item in cart:
                 OrderItem.objects.create(
                     order=order,
@@ -27,16 +36,23 @@ def order_create(request):
                     price=item['price'],
                     quantity=item['quantity']
                 )
-                # Очистить корзину
-                cart.clear()
-                # Запустить асинхронное задание
-                order_created.delay(order.id)
-                # задать заказ в сеансе
-                request.session['order_id'] = order.id
-                # перенаправить к платежу
-                return redirect(reverse('payment:process'))
+
+            # Очистка корзины после создания заказа
+            cart.clear()
+
+            # Запуск асинхронного задания
+            order_created.delay(order.id)
+
+            # Сохранение ID заказа в сессию
+            request.session['order_id'] = order.id
+
+            # Перенаправление на страницу платежа
+            return redirect(reverse('payment:process'))
+
     else:
+        # Если метод GET, создаем пустую форму
         form = OrderCreateForm()
+
     return render(request, 'orders/order/create.html', {'cart': cart, 'form': form})
 
 
