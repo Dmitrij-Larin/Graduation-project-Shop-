@@ -5,6 +5,7 @@ from shop.models import Product
 
 
 class Order(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
@@ -23,7 +24,7 @@ class Order(models.Model):
         ]
 
     def __str__(self):
-        return f'Заказ {self.id}'
+        return f'Заказ {self.id}, {self.first_name} {self.last_name}'
 
     def get_total_cost(self):
         return sum(item.get_cost() for item in self.items.all())
@@ -56,7 +57,7 @@ class OrderItem(models.Model):
         max_digits=10,
         decimal_places=2
     )
-    quantity = models.PositiveIntegerField(default=1)
+    quantity = models.PositiveIntegerField()
 
     def __str__(self):
         return str(self.id)
