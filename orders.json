@@ -3,210 +3,705 @@
     "model": "orders.order",
     "pk": 1,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user2@web.top",
+      "email": "user1@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-18T15:38:58.743Z",
-      "updated": "2025-06-18T15:38:58.743Z",
-      "paid": false
+      "created": "2025-06-25T10:30:15.506Z",
+      "updated": "2025-06-25T10:30:15.506Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 2,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user3@web.top",
+      "email": "user1@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-18T16:00:18.677Z",
-      "updated": "2025-06-18T16:00:18.677Z",
-      "paid": false
+      "created": "2025-06-25T10:33:04.891Z",
+      "updated": "2025-06-25T10:33:04.891Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 3,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user2@web.top",
+      "email": "user6@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-18T16:35:37.236Z",
-      "updated": "2025-06-18T16:35:37.236Z",
-      "paid": false
+      "created": "2025-06-25T10:35:40.989Z",
+      "updated": "2025-06-25T10:35:40.990Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 4,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user1@web.top",
+      "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T21:06:12.923Z",
-      "updated": "2025-06-23T21:06:12.923Z",
-      "paid": false
+      "created": "2025-06-25T10:41:49.625Z",
+      "updated": "2025-06-25T10:41:49.625Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 5,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user1@web.top",
+      "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:00:33.056Z",
-      "updated": "2025-06-23T22:00:33.056Z",
-      "paid": false
+      "created": "2025-06-25T10:47:58.540Z",
+      "updated": "2025-06-25T10:47:58.540Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 6,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user5@web.top",
+      "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:03:25.007Z",
-      "updated": "2025-06-23T22:03:25.008Z",
-      "paid": false
+      "created": "2025-06-25T11:35:25.473Z",
+      "updated": "2025-06-25T11:35:25.473Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 7,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user1@web.top",
+      "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:07:16.645Z",
-      "updated": "2025-06-23T22:07:16.645Z",
-      "paid": false
+      "created": "2025-06-25T11:51:01.160Z",
+      "updated": "2025-06-25T11:51:01.160Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 8,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user1@web.top",
+      "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:12:40.870Z",
-      "updated": "2025-06-23T22:12:40.870Z",
-      "paid": false
+      "created": "2025-06-25T12:18:01.878Z",
+      "updated": "2025-06-25T12:18:01.878Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 9,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user5@web.top",
+      "email": "user1@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:15:19.641Z",
-      "updated": "2025-06-23T22:15:19.641Z",
-      "paid": false
+      "created": "2025-06-25T12:47:03.282Z",
+      "updated": "2025-06-25T12:47:03.282Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 10,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "user1@web.top",
+      "email": "stethem@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:16:48.995Z",
-      "updated": "2025-06-23T22:16:48.995Z",
-      "paid": false
+      "created": "2025-06-25T16:30:10.433Z",
+      "updated": "2025-06-25T16:30:10.433Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 11,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
       "email": "user1@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-23T22:17:20.848Z",
-      "updated": "2025-06-23T22:17:20.848Z",
-      "paid": false
+      "created": "2025-06-25T16:51:23.154Z",
+      "updated": "2025-06-25T16:51:23.154Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 12,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
-      "email": "admin@web.top",
+      "email": "user5@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-25T13:35:51.328Z",
-      "updated": "2025-06-25T13:35:51.328Z",
-      "paid": false
+      "created": "2025-06-28T18:32:14.027Z",
+      "updated": "2025-06-28T18:32:14.027Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 13,
     "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
       "email": "user1@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-25T13:54:16.834Z",
-      "updated": "2025-06-25T13:54:16.834Z",
-      "paid": false
+      "created": "2025-06-29T00:10:25.811Z",
+      "updated": "2025-06-29T00:10:25.811Z",
+      "paid": false,
+      "stripe_id": ""
     }
   },
   {
     "model": "orders.order",
     "pk": 14,
     "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user6@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T10:09:21.786Z",
+      "updated": "2025-06-30T10:09:21.786Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 15,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user6@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T10:14:22.582Z",
+      "updated": "2025-06-30T10:14:22.582Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 16,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user4@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T10:20:17.040Z",
+      "updated": "2025-06-30T10:20:17.040Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 17,
+    "fields": {
+      "user": 1,
       "first_name": "Дмитрий",
       "last_name": "Ларин",
       "email": "admin@web.top",
       "address": "Рязань, Рязанская область",
       "postal_code": "390044",
       "city": "Рязань",
-      "created": "2025-06-25T16:21:24.127Z",
-      "updated": "2025-06-25T16:21:24.127Z",
-      "paid": false
+      "created": "2025-06-30T10:32:46.988Z",
+      "updated": "2025-06-30T10:32:46.988Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 18,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T10:53:04.876Z",
+      "updated": "2025-06-30T10:53:04.876Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 19,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T10:57:22.094Z",
+      "updated": "2025-06-30T10:57:22.094Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 20,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T11:07:41.448Z",
+      "updated": "2025-06-30T11:07:41.448Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 21,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T11:08:28.587Z",
+      "updated": "2025-06-30T11:08:28.587Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 22,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user4@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T11:14:16.859Z",
+      "updated": "2025-06-30T11:14:16.859Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 23,
+    "fields": {
+      "user": 1,
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user@web.top",
+      "address": "г. Москва",
+      "postal_code": "125698",
+      "city": "Москва",
+      "created": "2025-06-30T11:33:59.262Z",
+      "updated": "2025-06-30T11:33:59.262Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 24,
+    "fields": {
+      "user": 1,
+      "first_name": "Иван",
+      "last_name": "Иванов",
+      "email": "user@web.top",
+      "address": "г. Москва",
+      "postal_code": "125698",
+      "city": "Москва",
+      "created": "2025-06-30T11:38:35.606Z",
+      "updated": "2025-06-30T11:39:04.814Z",
+      "paid": true,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 25,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-06-30T12:14:47.475Z",
+      "updated": "2025-06-30T12:15:21.483Z",
+      "paid": true,
+      "stripe_id": "pi_3RfgcIRsKZT8tGut1W5U0YoI"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 26,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-02T02:41:36.176Z",
+      "updated": "2025-07-02T02:41:36.176Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 27,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-02T11:27:57.662Z",
+      "updated": "2025-07-02T11:28:35.313Z",
+      "paid": true,
+      "stripe_id": "pi_3RgOq7RsKZT8tGut1tFpeBrj"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 28,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-02T12:12:26.534Z",
+      "updated": "2025-07-02T12:13:03.665Z",
+      "paid": true,
+      "stripe_id": "pi_3RgPXARsKZT8tGut1qSWQwTy"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 29,
+    "fields": {
+      "user": 1,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-02T14:13:58.854Z",
+      "updated": "2025-07-02T14:14:29.673Z",
+      "paid": true,
+      "stripe_id": "pi_3RgRQgRsKZT8tGut1G0XnNTx"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 30,
+    "fields": {
+      "user": 4,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T15:19:22.005Z",
+      "updated": "2025-07-04T15:19:22.005Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 31,
+    "fields": {
+      "user": 4,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T20:00:33.047Z",
+      "updated": "2025-07-04T20:01:29.181Z",
+      "paid": true,
+      "stripe_id": "pi_3RhFnXRsKZT8tGut1XppdvY7"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 32,
+    "fields": {
+      "user": 4,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T20:38:28.292Z",
+      "updated": "2025-07-04T20:38:28.292Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 33,
+    "fields": {
+      "user": 4,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "user7@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T20:40:58.904Z",
+      "updated": "2025-07-04T20:40:58.904Z",
+      "paid": false,
+      "stripe_id": ""
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 34,
+    "fields": {
+      "user": 6,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T23:24:15.034Z",
+      "updated": "2025-07-04T23:24:50.176Z",
+      "paid": true,
+      "stripe_id": "pi_3RhIyKRsKZT8tGut1ePTmZcO"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 35,
+    "fields": {
+      "user": 6,
+      "first_name": "Дмитрий",
+      "last_name": "Ларин",
+      "email": "admin2@web.top",
+      "address": "Рязань, Рязанская область",
+      "postal_code": "390044",
+      "city": "Рязань",
+      "created": "2025-07-04T23:27:36.188Z",
+      "updated": "2025-07-04T23:28:07.564Z",
+      "paid": true,
+      "stripe_id": "pi_3RhJ1WRsKZT8tGut1S2LBwUR"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "product": 4,
+      "price": "8622.00",
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 6,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 7,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 8,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 9,
+    "fields": {
+      "order": 9,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 10,
+    "fields": {
+      "order": 10,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 11,
+    "fields": {
+      "order": 11,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
     }
   },
   {
@@ -214,9 +709,9 @@
     "pk": 12,
     "fields": {
       "order": 12,
-      "product": 10,
-      "price": "7123.00",
-      "quantity": 1
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 3
     }
   },
   {
@@ -224,8 +719,8 @@
     "pk": 13,
     "fields": {
       "order": 13,
-      "product": 11,
-      "price": "6212.00",
+      "product": 3,
+      "price": "7570.00",
       "quantity": 1
     }
   },
@@ -234,8 +729,258 @@
     "pk": 14,
     "fields": {
       "order": 14,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 15,
+    "fields": {
+      "order": 15,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 16,
+    "fields": {
+      "order": 16,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 17,
+    "fields": {
+      "order": 17,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 18,
+    "fields": {
+      "order": 18,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 19,
+    "fields": {
+      "order": 19,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 20,
+    "fields": {
+      "order": 20,
+      "product": 5,
+      "price": "7123.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 21,
+    "fields": {
+      "order": 21,
+      "product": 5,
+      "price": "7123.00",
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 22,
+    "fields": {
+      "order": 22,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 23,
+    "fields": {
+      "order": 23,
+      "product": 5,
+      "price": "7123.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 24,
+    "fields": {
+      "order": 24,
+      "product": 4,
+      "price": "8622.00",
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 25,
+    "fields": {
+      "order": 25,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 26,
+    "fields": {
+      "order": 26,
+      "product": 12,
+      "price": "11990.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 27,
+    "fields": {
+      "order": 27,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 28,
+    "fields": {
+      "order": 28,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 29,
+    "fields": {
+      "order": 29,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 30,
+    "fields": {
+      "order": 30,
+      "product": 3,
+      "price": "7570.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 31,
+    "fields": {
+      "order": 30,
       "product": 11,
-      "price": "6212.00",
+      "price": "4990.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 32,
+    "fields": {
+      "order": 31,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 33,
+    "fields": {
+      "order": 31,
+      "product": 13,
+      "price": "6790.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 34,
+    "fields": {
+      "order": 32,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 35,
+    "fields": {
+      "order": 33,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 36,
+    "fields": {
+      "order": 34,
+      "product": 2,
+      "price": "16190.00",
+      "quantity": 1
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 37,
+    "fields": {
+      "order": 34,
+      "product": 11,
+      "price": "4990.00",
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 38,
+    "fields": {
+      "order": 34,
+      "product": 6,
+      "price": "2390.00",
+      "quantity": 3
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 39,
+    "fields": {
+      "order": 35,
+      "product": 1,
+      "price": "11990.00",
       "quantity": 1
     }
   }
