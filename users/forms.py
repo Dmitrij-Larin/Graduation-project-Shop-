@@ -1,16 +1,17 @@
 from django import forms
+from django.contrib.auth import password_validation
+from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm, AuthenticationForm
+from django.core.exceptions import ValidationError
 
 from users.models import User
 from users.validators import validate_password
-from django.contrib.auth.forms import PasswordChangeForm, UserCreationForm, AuthenticationForm
-from django.core.exceptions import ValidationError
-from django.contrib.auth import password_validation
 
 
 class StyleFromMixin:
     """
     Стилизация к полям формы
     """
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
@@ -21,6 +22,7 @@ class UserForm(StyleFromMixin, forms.ModelForm):
     """
     Форма пользователя
     """
+
     class Meta:
         """
         Класс с настройками для модели User
@@ -33,6 +35,7 @@ class UserRegisterForm(StyleFromMixin, UserCreationForm):
     """
     Форма регистрации пользователя
     """
+
     class Meta:
         """
         Класс с настройками для модели User
@@ -55,6 +58,7 @@ class UserLoginForm(StyleFromMixin, AuthenticationForm):
     """
     Форма логина пользователя
     """
+
     class Meta:
         model = AuthenticationForm
         fields = ('email', 'password')
@@ -64,6 +68,7 @@ class UserUpdateForm(StyleFromMixin, forms.ModelForm):
     """
     Форма обновления данных пользователя
     """
+
     class Meta:
         """
         Класс с настройками для модели User
@@ -76,6 +81,7 @@ class UserPasswordChangeForm(StyleFromMixin, PasswordChangeForm):
     """
     Форма изменения пароля пользователя
     """
+
     def clean_new_password2(self):
         """
         Изменение пароля

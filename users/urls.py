@@ -16,4 +16,4 @@ urlpatterns = [
     path('change_password/', UserPasswordChangeView.as_view(), name='user_change_password'),
     path('profile/genpassword/', user_generate_new_password_view, name='user_generate_new_password'),
     path('user/<int:user_id>/orders/', user_orders, name='user_orders'),
-    ]
+]

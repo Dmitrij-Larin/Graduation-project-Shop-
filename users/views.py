@@ -1,16 +1,15 @@
 import random
 import string
 
-from django.shortcuts import reverse, redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView, LogoutView, PasswordChangeView
-from django.views.generic import CreateView, UpdateView, DetailView
+from django.shortcuts import reverse, redirect, render, get_object_or_404
 from django.urls import reverse_lazy
+from django.views.generic import CreateView, UpdateView, DetailView
 
-from users.models import User
 from users.forms import UserRegisterForm, UserLoginForm, UserUpdateForm, UserPasswordChangeForm, UserForm
+from users.models import User
 from users.services import send_new_password, send_register_email
-from orders.models import Order
 
 
 class UserRegisterView(CreateView):

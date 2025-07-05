@@ -20,6 +20,7 @@ class UserManager(BaseUserManager):
     """
     Модель создания пользователей
     """
+
     def create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError('Email обязателен')
