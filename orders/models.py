@@ -5,6 +5,9 @@ from shop.models import Product
 
 
 class Order(models.Model):
+    """
+    Модель заказа
+    """
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -27,9 +30,15 @@ class Order(models.Model):
         return f'Заказ {self.id}, {self.first_name} {self.last_name}'
 
     def get_total_cost(self):
+        """
+        Стоимость заказа
+        """
         return sum(item.get_cost() for item in self.items.all())
 
     def get_stripe_url(self):
+        """
+        Получение URL Stripe
+        """
         if not self.stripe_id:
             # никаких ассоциированных платежей
             return ''
@@ -43,6 +52,9 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
+    """
+    Модель товаров в заказе
+    """
     order = models.ForeignKey(
         Order,
         related_name='items',
@@ -63,4 +75,7 @@ class OrderItem(models.Model):
         return str(self.id)
 
     def get_cost(self):
+        """
+        Стоимость товара(-ов) в заказе
+        """
         return self.price * self.quantity

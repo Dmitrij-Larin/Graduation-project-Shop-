@@ -6,6 +6,9 @@ from shop.models import Category, Product
 
 
 def product_list(request, category_slug=None):
+    """
+    Список товаров
+    """
     category = None
     categories = Category.objects.all()
     products = Product.objects.filter(available=True)
@@ -30,6 +33,9 @@ def product_list(request, category_slug=None):
 
 
 def product_detail(request, id, slug):
+    """
+    Детали товаров
+    """
     product = get_object_or_404(
         Product, id=id, slug=slug, available=True
     )

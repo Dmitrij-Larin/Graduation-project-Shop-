@@ -16,6 +16,9 @@ from orders.tasks import order_created
 
 
 def order_create(request):
+    """
+    Создание заказа
+    """
     cart = Cart(request)
     # Проверка на аутентификацию пользователя
     if not request.user.is_authenticated:
@@ -59,6 +62,9 @@ def order_create(request):
 
 @staff_member_required
 def admin_order_detail(request, order_id):
+    """
+    Представление деталей заказа в админке
+    """
     order = get_object_or_404(Order, id=order_id)
     return render(
         request, 'admin/orders/order/detail.html', {'order': order}
@@ -67,6 +73,9 @@ def admin_order_detail(request, order_id):
 
 @staff_member_required
 def admin_order_pdf(request, order_id):
+    """
+    Представление PDF-файла счёт-фактуры в админке
+    """
     order = get_object_or_404(Order, id=order_id)
     html = render_to_string(
         'orders/order/pdf.html', {'order': order}
@@ -87,6 +96,9 @@ def admin_order_pdf(request, order_id):
 
 
 def order_details(request, order_id):
+    """
+    Детали заказа
+    """
     order = get_object_or_404(Order, id=order_id)
     order_user = order.user
     context = {

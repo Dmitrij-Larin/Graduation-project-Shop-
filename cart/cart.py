@@ -71,7 +71,6 @@ class Cart:
     def get_total_price(self):
         """
         Расчёт общей стоимости товаров в корзине
-        :return:
         """
         return sum(
             Decimal(item['price']) * item['quantity']

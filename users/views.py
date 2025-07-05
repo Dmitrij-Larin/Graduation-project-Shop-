@@ -134,6 +134,9 @@ def user_generate_new_password_view(request):
 
 
 def user_orders(request, user_id):
+    """
+    Заказы пользователя
+    """
     user = get_object_or_404(User, id=user_id)
     orders = user.orders.all()
     context = {

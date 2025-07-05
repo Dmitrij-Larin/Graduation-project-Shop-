@@ -8,6 +8,9 @@ from shop.models import Product
 
 @require_POST
 def card_add(request, product_id):
+    """
+    Добавление товаров в корзину
+    """
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     form = CartAddProductForm(request.POST)
@@ -23,6 +26,9 @@ def card_add(request, product_id):
 
 @require_POST
 def cart_remove(request, product_id):
+    """
+    Удаление товаров из корзины
+    """
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
@@ -30,6 +36,9 @@ def cart_remove(request, product_id):
 
 
 def cart_detail(request):
+    """
+    Детали по товарам в корзине
+    """
     cart = Cart(request)
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(

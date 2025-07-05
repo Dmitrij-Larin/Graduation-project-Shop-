@@ -9,6 +9,9 @@ from payment.tasks import payment_completed
 
 @csrf_exempt
 def stripe_webhook(request):
+    """
+    Stripe веб-перехватчик
+    """
     payload = request.body
     sig_header = request.META['HTTP_STRIPE_SIGNATURE']
     event = None

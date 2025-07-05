@@ -10,6 +10,9 @@ from orders.models import Order, OrderItem
 
 
 def export_to_csv(modeladmin, request, queryset):
+    """
+    Экспорт заказов в CSV-файлы
+    """
     opts = modeladmin.model._meta
     content_disposition = (f'attachment; filename={opts.verbose_name}.csv')
     response = HttpResponse(content_type='text/csv')
@@ -38,6 +41,9 @@ export_to_csv.short_description = 'Export to CSV'
 
 
 def order_stripe_payment(obj):
+    """
+    Уведомление об успешной оплате
+    """
     url = obj.get_stripe_url()
     if obj.stripe_id:
         html = f'<a href="{url}" target="blank">{obj.stripe_id}</a>'
@@ -49,16 +55,25 @@ order_stripe_payment.short_description = 'Stripe payment'
 
 
 class OrderItemInline(admin.TabularInline):
+    """
+    Вставка модели заказа в админку
+    """
     model = OrderItem
     raw_id_fields = ['product']
 
 
 def order_detail(obj):
+    """
+    Ссылка на детали заказа в админке
+    """
     url = reverse('orders:admin_order_detail', args=[obj.id])
     return mark_safe(f'<a href="{url}">Посмотреть</a>')
 
 
 def order_pdf(obj):
+    """
+    Ссылка на PDF-файл счёт-фактуры в админке
+    """
     url = reverse('orders:admin_order_pdf', args=[obj.id])
     return mark_safe(f'<a href="{url}">PDF</a>')
 order_pdf.short_description = 'Invoice'
@@ -66,6 +81,9 @@ order_pdf.short_description = 'Invoice'
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
+    """
+    Детали заказа в админке
+    """
     list_display = [
         'id',
         'user',

@@ -4,6 +4,9 @@ from django.utils.translation import gettext as _
 
 
 class OrderCreateForm(forms.ModelForm):
+    """
+    Форма создания заказа
+    """
     class Meta:
         model = Order
         fields = [

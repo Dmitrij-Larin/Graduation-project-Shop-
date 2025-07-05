@@ -3,12 +3,18 @@ from shop.models import Category, Product
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
+    """
+    Регистрация модели Category в административном интерфейсе
+    """
     list_display = ['name', 'slug']
     prepopulated_fields = {'slug': ('name',)}
 
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
+    """
+    Регистрация модели Product в административном интерфейсе
+    """
     list_display = [
         'name',
         'slug',

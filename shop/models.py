@@ -3,6 +3,9 @@ from django.urls import reverse
 
 
 class Category(models.Model):
+    """
+    Модель категорий товаров
+    """
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
 
@@ -22,6 +25,9 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+    Модель товаров
+    """
     category = models.ForeignKey(
         Category,
         related_name='products',

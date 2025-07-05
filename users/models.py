@@ -17,6 +17,9 @@ class UserRoles(models.TextChoices):
 
 
 class UserManager(BaseUserManager):
+    """
+    Модель создания пользователей
+    """
     def create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError('Email обязателен')
@@ -38,6 +41,9 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
+    """
+    Модель пользователя
+    """
     email = models.EmailField(unique=True, verbose_name='Эл. почта')
     first_name = models.CharField(max_length=150, verbose_name='Имя', default='Anonymous')
     last_name = models.CharField(max_length=150, verbose_name='Фамилия', default='Anonymous')

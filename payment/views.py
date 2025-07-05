@@ -13,6 +13,9 @@ stripe.api_version = settings.STRIPE_API_VERSION
 
 
 def payment_process(request):
+    """
+    Реализация процесса оплаты через Stripe
+    """
     order_id = request.session.get('order_id', None)
     order = get_object_or_404(Order, id=order_id)
     if request.method == 'POST':
@@ -49,8 +52,14 @@ def payment_process(request):
 
 
 def payment_completed(request):
+    """
+    Уведомление об успешной оплате
+    """
     return render(request, 'payment/completed.html')
 
 
 def payment_canceled(request):
+    """
+    Уведомление об отмене оплаты
+    """
     return render(request, 'payment/canceled.html')
